@@ -17,6 +17,7 @@ namespace ChinookSystem.Data.Entities
         private string _ReleaseLabel;
         [Key]
         public int AlbumId { get; set; }
+        [Required(ErrorMessage = "Album title is required.")]
         [StringLength(160,ErrorMessage ="Maximum charcters for title is 160")]
         public string Title { get; set; }
         public int ArtistId { get; set; }

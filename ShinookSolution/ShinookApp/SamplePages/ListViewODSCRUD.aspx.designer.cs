@@ -7,27 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShinookApp {
+namespace ShinookApp.SamplePages {
     
     
-    public partial class SiteMaster {
+    public partial class WebForm2 {
         
         /// <summary>
-        /// navMenu control.
+        /// AlbumList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu navMenu;
+        protected global::System.Web.UI.WebControls.ListView AlbumList;
         
         /// <summary>
-        /// MainContent control.
+        /// AlbumListODS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.ObjectDataSource AlbumListODS;
+        
+        /// <summary>
+        /// ArtistListODS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ArtistListODS;
     }
 }

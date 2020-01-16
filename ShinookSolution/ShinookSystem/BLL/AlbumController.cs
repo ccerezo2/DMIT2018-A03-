@@ -16,6 +16,7 @@ namespace ShinookSystem.BLL
     public class AlbumController
     {
         //private data member to use with error handle messages
+        //this list will hold a series of reason for  BusinessRuleException
         private List<string> reasons = new List<string>();
 
         #region Queries
@@ -102,7 +103,7 @@ namespace ShinookSystem.BLL
                         item.ReleaseLabel;
 
                     context.Entry(item).State = System.Data.Entity.EntityState.Modified;   //staging
-                    return context.SaveChanges();      //commit to database
+                    return context.SaveChanges();      //commit to database AND RETURN ROWS AFFECTED.
                 }
                 else
                 {
@@ -110,13 +111,13 @@ namespace ShinookSystem.BLL
                 }
             }
         }
-
+        //this delete is being used for ODS
         [DataObjectMethod(DataObjectMethodType.Delete, false)]
         public int Album_Delete(Album item)
         {
             return Album_Delete(item.AlbumId);
         }
-
+        //this is the other delte but does the work lmao sad...
         public int Album_Delete(int albumid)
         {
             using (var context = new ChinookContext())
